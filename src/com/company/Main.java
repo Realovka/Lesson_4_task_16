@@ -19,13 +19,16 @@ public class Main {
 
         System.out.println(Arrays.toString(array));
 
+
         int i, j;
         boolean t = true;
+        outer:
         for (i = 0; i < array.length - 1; i++) {
-            for (j = i+1; j < array.length; j++)
+            for (j = i + 1; j < array.length; j++)
                 if (array[i] != array[j]) {
                 } else {
                     t = false;
+                    break outer;
                 }
         }
         if (t) {
